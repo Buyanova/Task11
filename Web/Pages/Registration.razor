@@ -4,8 +4,9 @@
 @inject IJSRuntime js
 @inject AuthenticationStateProvider authenStateProvider
 @inject NavigationManager navManager
+@using BackendApi.Controllers
 
-@*<div class="row">
+<div class="row">
     <div class="col-lg-4 offset-lg-4 pt-4 pb-4 border">
         <div class="mb-3 text-center">
             <h3>Registation</h3>
@@ -20,14 +21,14 @@
         </div>
         <div class="mb-3">
             <label>Email</label>
-            <input @bind="model.Email" type="email" class="form-control" placeholder="Login" />
+            <input @bind="model.Email" type="email" class="form-control" placeholder="New login" />
         </div>
         <div class="mb-3">
             <label>Password</label>
-            <input @bind="model.Password" type="password" class="form-control" placeholder="Password" />
+            <input @bind="model.Password" type="password" class="form-control" placeholder="New password" />
         </div>
         <div class="mb-3 d-grid gap-2">
-            <button @onclick="Authenticate" class="btn btn-primary">Login</button>
+            <button @onclick="Authenticate" class="btn btn-primary">Registration</button>
         </div>
     </div>
 </div>
@@ -45,26 +46,7 @@
 
     private async Task Authenticate()
     {
-        var userAccount = await UserService.Authorization(model.FIO, model.Phone, model.Email,
-            model.Password);
-        if (userAccount == null)
-        {
-            await js.InvokeVoidAsync("alert", "Invalid Colyaska");
-            return;
-        }
 
-        var custonAuthStateProvider = (CustomAuthenticationStateProvider)authenStateProvider;
-
-        await custonAuthStateProvider.UpdateRegistrationStateAsync(new UserLocal
-            {
-                Id = userAccount.IdPokupatel.ToString(),
-                Email = userAccount.Email,
-                FIO = userAccount.Fio,
-                Password = userAccount.Password,
-                Phone = userAccount.Phone,
-                Role = "User"
-
-            });
-        navManager.NavigateTo("/", true);
-    }*@
+        
+    }
 }

@@ -142,3 +142,4 @@ E:\Практика\Учебная практика\3 курс\11_Внедрен
 E:\Практика\Учебная практика\3 курс\11_Внедрение авторизации и аутентификации\BackendApi\Web\obj\Debug\net6.0\Web.csproj.CopyComplete
 E:\Практика\Учебная практика\3 курс\11_Внедрение авторизации и аутентификации\BackendApi\Web\obj\Debug\net6.0\Web.genruntimeconfig.cache
 E:\Практика\Учебная практика\3 курс\11_Внедрение авторизации и аутентификации\BackendApi\Web\obj\Debug\net6.0\ref\Web.dll
+E:\Практика\Учебная практика\3 курс\11_Внедрение авторизации и аутентификации\BackendApi\Web\bin\Debug\net6.0\Blazored.LocalStorage.dll

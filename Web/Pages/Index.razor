@@ -1,11 +1,11 @@
 ﻿@inject Blazored.LocalStorage.ILocalStorageService localStore
 @page "/"
-<h1>Your LocalStorage Note</h1>
+@*<h1>Your LocalStorage Note</h1>
 
 <textarea @bind="noteContent" />
 <br />
 <button @onclick="UpdateLocalStorage">Save</button>
-<button @onclick="ClearLocalStorage">Clear</button>
+<button @onclick="ClearLocalStorage">Clear</button>*@
 
 @using Web.Auth;
 @inject IJSRuntime js
